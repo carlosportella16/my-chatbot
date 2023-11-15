@@ -1,7 +1,7 @@
 # my-chatboot
 
 ## Overview
-This project integrates OpenAI's GPT technology to create an interactive chatbot. As of the last update, the code is compatible with the latest version of ChatGPT, ensuring up-to-date interactions and features.
+This project I show how to integrate GPT-4 in a python project as a chatbot. I'll be implementing upload and files generations by prompt in the chatbot.
 
 ## Features
 - Interactive ChatGPT-based chatbot.
@@ -28,5 +28,11 @@ python my-chatbot.py
 ### Using ChatGpt 4
 To use chatgpt 4 instead 3.5 you need to change this part of code:
 ```
-model="gpt-4.0-turbo",  # Updated to ChatGPT-4 model
+model="gpt-4-vision-preview",  # Updated to ChatGPT-4 model
+```
+
+### Using ChatGpt 3.5
+To use chatgpt 4 instead 3.5 you need to change this part of code:
+```
+model="gpt-3.5-turbo",  # Updated to ChatGPT-3.5 model
 ```

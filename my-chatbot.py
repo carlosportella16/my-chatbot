@@ -1,9 +1,12 @@
 from openai import OpenAI
 import os
 
-client = OpenAI(
-    api_key="YOUR-API-KEY"
-)
+# Load the API key from an environment variable
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("No OpenAI API key found. Set the OPENAI_API_KEY environment variable.")
+
+client = OpenAI(api_key=api_key)
 
 
 def chat_with_gpt(prompt):
@@ -14,7 +17,7 @@ def chat_with_gpt(prompt):
             "content": prompt,
         }
     ],
-    model="gpt-3.5-turbo",
+    model="gpt-4",
     )
 
     return response.choices[0].message.content.strip()
